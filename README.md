@@ -11,29 +11,69 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages). 
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+`gradr_lib` offers utilities for converting climbing grading systems with a really simple interface.
+
+The library was initial going to be developed for the [Gradr App]() I've also created, but thought it might be cool to make it open-source and let the community use it and hopefully help improve it too!
+
+> Gradr does all it can to make sense of the differences and inconsistencies between grading systems, so take note that converting from one grading system to another might not always be acurate. 
+> You can take a look at [this]() writup on how gradr handles this. Feel free to offer any advice or help in this regard!
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+* Pre-Built common grading systems
+  * [x] V-Scale
+  * [x] Font
+  * [ ] French
+  * [ ] YDS
+  * [ ] South africa
+  * [ ] Brazil
+  * ...
+* Easy conversion between grading systems
+* [ ] Grading system detector
+* [ ] Convert to all systems
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+To install the package check the install [guide](https://pub.dev/packages/cli_badges/install)
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+Here is an example on how to convert from V-Scale to Font scale and viceversa:
 
 ```dart
-const like = 'sample';
+final vToFont = GradeCalculator(
+    systemA: vScale,
+    systemB: fontScale,
+);
+
+// Convert from grading system A (vScale) to system B (fontScale)
+vToFont.atob(
+    vScale.findByName('V3')
+);
+
+// Convert from grading system B (fontScale) to system A (vScale)
+vToFont.btoa(
+    fontScale.findByName('6B')
+);
+// > V3
 ```
 
-## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+## Additional info
+
+There are some examples [here](https://github.com/nombrekeff/gradr_lib/tree/main/example) and [here](https://github.com/nombrekeff/gradr_lib/tree/main/test).
+
+If you encounter any problems or fancy a feature to be added please head over to the GitHub [repository](https://github.com/nombrekeff/gradr_lib/) and [drop an issue](https://github.com/nombrekeff/gradr_lib/issues/new).
+
+## Support the project
+
+I tend to open source anything I can, and love to help people that might need help with the project. 
+
+If you are using this project and are happy with it or just want to encourage me to continue creating stuff, there are few ways you can do so:
+
+- Starring and sharing the project 🚀
+- Reporting bugs 🐛
+- Sending feedback
+- Or even coding :P
+
+Thanks! ❤️

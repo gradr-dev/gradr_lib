@@ -5,7 +5,7 @@ import 'package:gradr_lib/src/enums/grade_band.dart';
 import 'package:gradr_lib/src/grade.dart';
 import 'package:gradr_lib/src/grade_system.dart';
 
-final begginerBandGrades = [
+final begginerVermin = [
   Grade(
     name: 'VB-',
     intensity: 0,
@@ -26,7 +26,7 @@ final begginerBandGrades = [
   ),
 ];
 
-final intermediateBandGrades = [
+final intermediateVermin = [
   Grade(
     name: 'V0-',
     intensity: 3,
@@ -47,7 +47,7 @@ final intermediateBandGrades = [
   ),
 ];
 
-final experiencedBandGrades = [
+final experiencedVermin = [
   Grade(
     name: 'V1',
     intensity: 6,
@@ -74,7 +74,7 @@ final experiencedBandGrades = [
   ),
 ];
 
-final expertBandGrades = [
+final expertVermin = [
   Grade(
     name: 'V5',
     intensity: 10,
@@ -113,7 +113,7 @@ final expertBandGrades = [
   ),
 ];
 
-final eliteBandGrades = [
+final eliteVermin = [
   Grade(
     name: 'V11',
     intensity: 16,
@@ -164,17 +164,16 @@ final eliteBandGrades = [
   ),
 ];
 
-
 var verminGradeSystem = GradeSystem(
   code: 'BLDV',
   name: 'Bouldering Vermin V-scale',
   country: 'USA',
   climbingStyle: ClimbingStyle.boulder,
   grades: [
-    ...begginerBandGrades,
-    ...intermediateBandGrades,
-    ...experiencedBandGrades,
-    ...expertBandGrades,
-    ...eliteBandGrades,
+    ...begginerVermin,
+    ...intermediateVermin,
+    ...experiencedVermin,
+    ...expertVermin,
+    ...eliteVermin,
   ],
 );

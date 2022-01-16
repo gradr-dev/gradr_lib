@@ -5,7 +5,7 @@ import 'package:gradr_lib/src/enums/grade_band.dart';
 import 'package:gradr_lib/src/grade.dart';
 import 'package:gradr_lib/src/grade_system.dart';
 
-final begginnerBandGrades = [
+final begginnerFont = [
   Grade(
     name: '1A',
     intensity: 0,
@@ -120,7 +120,7 @@ final begginnerBandGrades = [
   ),
 ];
 
-final intermediateBandGrades = [
+final intermediateFont = [
   Grade(
     name: '3',
     intensity: 18,
@@ -141,7 +141,7 @@ final intermediateBandGrades = [
   ),
 ];
 
-final experiencedBandGrades = [
+final experiencedFont = [
   Grade(
     name: '5',
     intensity: 21,
@@ -180,7 +180,7 @@ final experiencedBandGrades = [
   ),
 ];
 
-final expertBandGrades = [
+final expertFont = [
   Grade(
     name: '6C',
     intensity: 10,
@@ -231,7 +231,7 @@ final expertBandGrades = [
   ),
 ];
 
-final eliteBandGrades = [
+final eliteFont = [
   Grade(
     name: '8A',
     intensity: 16,
@@ -288,10 +288,10 @@ var fontGradeSystem = GradeSystem(
   country: 'FRANCE',
   climbingStyle: ClimbingStyle.boulder,
   grades: [
-    ...begginnerBandGrades,
-    ...intermediateBandGrades,
-    ...experiencedBandGrades,
-    ...expertBandGrades,
-    ...eliteBandGrades,
+    ...begginnerFont,
+    ...intermediateFont,
+    ...experiencedFont,
+    ...expertFont,
+    ...eliteFont,
   ],
 );
