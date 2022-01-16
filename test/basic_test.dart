@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:gradr_lib/grading_systems/font_scale.dart';
-import 'package:gradr_lib/grading_systems/v_scale.dart';
+import 'package:gradr_lib/grading_systems/vermin_scale.dart';
 import 'package:gradr_lib/src/tools/grade_calculator.dart';
 
 void main() {

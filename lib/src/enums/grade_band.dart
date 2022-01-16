@@ -1,7 +1,7 @@
 enum GradeBand {
   begginer,
   intermediate,
-  advanced,
   experienced,
+  expert,
   elite,
 }
