@@ -8,6 +8,7 @@
 .buildlog/
 .history
 .svn/
+MENTAL_MAP.md
 
 # IntelliJ related
 *.iml
