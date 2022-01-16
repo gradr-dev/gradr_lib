@@ -9,6 +9,9 @@ class GradeSystem {
   final ClimbingStyle climbingStyle;
   final List<Grade> grades;
 
+  bool get isEmpty => grades.isEmpty;
+  bool get isNotEmpty => grades.isNotEmpty;
+
   GradeSystem({
     required this.code,
     required this.name,
@@ -23,6 +26,12 @@ class GradeSystem {
           (element) => element.gradeBand == band,
         )
         .toList();
+  }
+
+  Grade? findByName(String name) {
+    return grades.firstWhere(
+      (grade) => grade.name.toUpperCase() == name.toUpperCase(),
+    );
   }
 
   factory GradeSystem.fromJson(Map<String, dynamic> data) {

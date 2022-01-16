@@ -11,15 +11,17 @@ class GradeCalculator {
     required this.systemB,
   });
 
-  List<Grade> atob(Grade a) {
+  List<Grade> atob(Grade? a) {
     return convert(a, systemB);
   }
 
-  List<Grade> btoa(Grade b) {
+  List<Grade> btoa(Grade? b) {
     return convert(b, systemA);
   }
 
-  static List<Grade> convert(Grade grade, GradeSystem system) {
+  static List<Grade> convert(Grade? grade, GradeSystem system) {
+    if (grade == null || system.isEmpty) return [];
+
     var range = grade.difficultyRange;
     var bandGrades = system.gradesByBand(grade.gradeBand);
 
