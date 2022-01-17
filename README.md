@@ -68,7 +68,7 @@ vToFont.btoa(
 
 ## Need Gradr for another platform?
 
-You might be in luck, at gradr we're trying to offer the libraries for most common languages and frameworks. Take a look and see if the one you need is already done. Otherwise file an issue and we will try to implement it (help is also appreciated if you have the time and want to :heart:). 
+You might be in luck, at gradr we're trying to offer the libraries for most common languages and frameworks. Take a look and see if the one you need is already done. 
 * [x] Dart
 * [ ] JavaScript
   * [ ] React
@@ -78,6 +78,7 @@ You might be in luck, at gradr we're trying to offer the libraries for most comm
 * [ ] Java
 * [ ] PHP
 
+> If your platform or language is missing, feel free to file an issue and we will try to implement it. Or if you feel like it and have the time, you can contact us to help build it, we love that kind of stuff! :heart:
 
 ## Additional info
 
