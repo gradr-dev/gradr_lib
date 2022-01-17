@@ -11,7 +11,9 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages). 
 -->
 
-`gradr_lib` offers utilities for converting climbing grading systems with a really simple interface.
+> WORK IN PROGRESS, use at your own risk.
+
+Have you ever needed to convert from one grading system to another? and had to implement the calculations by yourself? `gradr_lib` offers utilities for converting climbing grading systems with a really simple interface so you don't have to reinvent the wheel.
 
 The library was initial going to be developed for the [Gradr App]() I've also created, but thought it might be cool to make it open-source and let the community use it and hopefully help improve it too!
 
@@ -27,14 +29,18 @@ The library was initial going to be developed for the [Gradr App]() I've also cr
   * [ ] YDS
   * [ ] South africa
   * [ ] Brazil
+  * [ ] UK
+  * [ ] IRCRA
+  * [ ] UIAA
   * ...
-* Easy conversion between grading systems
+* [ ] Pre-Built calculators
+* [ ] Easy conversion between grading systems
 * [ ] Grading system detector
 * [ ] Convert to all systems
 
 ## Getting started
 
-To install the package check the install [guide](https://pub.dev/packages/cli_badges/install)
+To install the package check the install [guide](https://pub.dev/packages/gradr_lib/install)
 
 ## Usage
 
@@ -50,6 +56,8 @@ final vToFont = GradeCalculator(
 vToFont.atob(
     vScale.findByName('V3')
 );
+
+// > 6B
 
 // Convert from grading system B (fontScale) to system A (vScale)
 vToFont.btoa(
