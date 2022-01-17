@@ -1,6 +1,7 @@
 <div align="center">
   
-  ![](.github/media/logo.png)
+  <img src=".github/media/logo.png" height="250">
+  
   
   Convert climbing grading systems with a really simple interface.
 
