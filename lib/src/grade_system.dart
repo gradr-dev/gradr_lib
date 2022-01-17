@@ -29,9 +29,13 @@ class GradeSystem {
   }
 
   Grade? findByName(String name) {
-    return grades.firstWhere(
-      (grade) => grade.name.toUpperCase() == name.toUpperCase(),
-    );
+    try {
+      return grades.firstWhere(
+        (grade) => grade.name.toUpperCase() == name.toUpperCase(),
+      );
+    } catch (e) {
+      return null;
+    }
   }
 
   factory GradeSystem.fromJson(Map<String, dynamic> data) {

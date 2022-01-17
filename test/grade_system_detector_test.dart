@@ -13,8 +13,12 @@ void main() {
   );
 
   test('GradeSystemDetector detects', () {
-    expect(detector.detect('9a').detectedSystems, [fontDetector.system]);
-    expect(detector.detect('9b').detectedSystems, [fontDetector.system]);
+    var t1 = detector.detect('9a');
+    var t2 = detector.detect('9b');
+
+    expect(t1.detectedSystems, [fontDetector.system]);
+    expect(t2.detectedSystems, [fontDetector.system]);
+
     expect(detector.detect('9c+').detectedSystems, [fontDetector.system]);
     expect(detector.detect('4a+').detectedSystems, [fontDetector.system]);
 

@@ -1,4 +1,5 @@
 enum GradeBand {
+  uknown,
   begginer,
   intermediate,
   experienced,
