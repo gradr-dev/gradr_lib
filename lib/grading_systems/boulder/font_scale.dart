@@ -282,7 +282,7 @@ final eliteFont = [
   ),
 ];
 
-var fontGradeSystem = GradeSystem(
+final fontGradeSystem = GradeSystem(
   code: 'FB',
   name: 'Fontainbleu Bouldering',
   country: 'FRANCE',

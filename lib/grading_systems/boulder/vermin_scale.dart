@@ -164,7 +164,7 @@ final eliteVermin = [
   ),
 ];
 
-var verminGradeSystem = GradeSystem(
+final verminGradeSystem = GradeSystem(
   code: 'BLDV',
   name: 'Bouldering Vermin V-scale',
   country: 'USA',
