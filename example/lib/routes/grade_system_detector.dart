@@ -72,16 +72,6 @@ class _GradeSystemDetectorScreenState extends State<GradeSystemDetectorScreen> {
                         .toList(),
                   ),
                 ),
-              // Expanded(
-              //   child: ListView.builder(
-              //     itemBuilder: (ctx, i) {
-              //       return GradeSystemWidget(
-              //         gradeSystem: detectedSystems[i],
-              //       );
-              //     },
-              //     itemCount: detectedSystems.length,
-              //   ),
-              // ),
             ],
           ),
         ),

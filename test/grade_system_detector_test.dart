@@ -31,4 +31,31 @@ void main() {
     expect(detector.detect('v0+').detectedSystems, [verminDetector.system]);
     expect(detector.detect('v0-').detectedSystems, [verminDetector.system]);
   });
+
+  //
+  for (var vg in verminDetector.system.grades) {
+    test('VerminScale test (${vg.name})', () {
+      var detection = detector.detect(vg.name);
+
+      expect(
+        detection.detectedSystems,
+        [verminDetector.system],
+      );
+
+      expect(detection.formalizedGrades, [vg]);
+    });
+  }
+
+  for (var fg in fontDetector.system.grades) {
+    test('FontScale test (${fg.name})', () {
+      var detection = detector.detect(fg.name);
+
+      expect(
+        detection.detectedSystems,
+        [fontDetector.system],
+      );
+
+      expect(detection.formalizedGrades, [fg]);
+    });
+  }
 }

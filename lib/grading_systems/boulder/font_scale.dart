@@ -302,7 +302,7 @@ class FontGradeDetector extends RegExpDetector {
       : super(
           system: fontGradeSystem,
           regexp: RegExp(
-            r'^(\d)([abc]?)[+-]?$$',
+            r'^(\d)([abc]?)[+-]?$',
             caseSensitive: false,
           ),
         );
