@@ -1,4 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
+import 'package:gradr_lib/grading_systems/boulder/font_scale.dart';
+import 'package:gradr_lib/grading_systems/boulder/vermin_scale.dart';
 import 'package:gradr_lib/src/tools/grade_system_detector.dart';
 
 void main() {

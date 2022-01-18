@@ -27,28 +27,6 @@ abstract class RegExpDetector extends GradeDetector {
   }
 }
 
-class VScaleGradeDetector extends RegExpDetector {
-  VScaleGradeDetector()
-      : super(
-          system: verminGradeSystem,
-          regexp: RegExp(
-            r'^v(b?|\d+)[+-]?$',
-            caseSensitive: false,
-          ),
-        );
-}
-
-class FontGradeDetector extends RegExpDetector {
-  FontGradeDetector()
-      : super(
-          system: fontGradeSystem,
-          regexp: RegExp(
-            r'^(\d)([abc]?)[+-]?$$',
-            caseSensitive: false,
-          ),
-        );
-}
-
 class GradeDetectorResult {
   final String originalInput;
   final List<Grade> formalizedGrades = [];

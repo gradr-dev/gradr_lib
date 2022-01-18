@@ -4,6 +4,7 @@ import 'package:gradr_lib/src/enums/climbing_style.dart';
 import 'package:gradr_lib/src/enums/grade_band.dart';
 import 'package:gradr_lib/src/grade.dart';
 import 'package:gradr_lib/src/grade_system.dart';
+import 'package:gradr_lib/src/tools/grade_system_detector.dart';
 
 final begginerVermin = [
   Grade(
@@ -177,3 +178,14 @@ final verminGradeSystem = GradeSystem(
     ...eliteVermin,
   ],
 );
+
+class VScaleGradeDetector extends RegExpDetector {
+  VScaleGradeDetector()
+      : super(
+          system: verminGradeSystem,
+          regexp: RegExp(
+            r'^v(b?|\d+)[+-]?$',
+            caseSensitive: false,
+          ),
+        );
+}

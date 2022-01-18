@@ -4,6 +4,7 @@ import 'package:gradr_lib/src/enums/climbing_style.dart';
 import 'package:gradr_lib/src/enums/grade_band.dart';
 import 'package:gradr_lib/src/grade.dart';
 import 'package:gradr_lib/src/grade_system.dart';
+import 'package:gradr_lib/src/tools/grade_system_detector.dart';
 
 final begginnerFont = [
   Grade(
@@ -295,3 +296,14 @@ final fontGradeSystem = GradeSystem(
     ...eliteFont,
   ],
 );
+
+class FontGradeDetector extends RegExpDetector {
+  FontGradeDetector()
+      : super(
+          system: fontGradeSystem,
+          regexp: RegExp(
+            r'^(\d)([abc]?)[+-]?$$',
+            caseSensitive: false,
+          ),
+        );
+}
