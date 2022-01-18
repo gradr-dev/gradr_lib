@@ -1,3 +1,6 @@
+import 'package:example/routes/grade_system_converter.dart';
+import 'package:example/routes/grade_system_detector.dart';
+import 'package:example/routes/home.screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,61 +12,23 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var darkTheme = ThemeData.dark();
+
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage(
-        title: 'Flutter Demo Home Page',
-      ),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
+      theme: darkTheme.copyWith(
+        appBarTheme: darkTheme.appBarTheme.copyWith(elevation: 0),
+        primaryColor: Colors.amber,
+        colorScheme: darkTheme.colorScheme.copyWith(
+          primary: Colors.amber,
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
+      routes: {
+        'home': (ctx) => const HomeScreen(),
+        'grade_system_detector': (ctx) => const GradeSystemDetectorScreen(),
+        'grade_system_converter': (ctx) => const GradeSystemConverterScreen(),
+      },
+      initialRoute: 'home',
     );
   }
 }
