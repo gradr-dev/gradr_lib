@@ -1,6 +1,7 @@
 import 'package:gradr_lib/src/enums/climbing_style.dart';
 import 'package:gradr_lib/src/enums/grade_band.dart';
 import 'package:gradr_lib/src/grade.dart';
+import 'package:gradr_lib/src/tools/grade_calculator.dart';
 
 class GradeSystem {
   final String code;
@@ -36,6 +37,13 @@ class GradeSystem {
     } catch (e) {
       return null;
     }
+  }
+
+  GradeCalculatorBuilder convert(String input) {
+    return GradeCalculatorBuilder(
+      input: input,
+      system: this,
+    );
   }
 
   factory GradeSystem.fromJson(Map<String, dynamic> data) {

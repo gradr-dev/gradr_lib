@@ -164,19 +164,19 @@ final experiencedFont = [
   Grade(
     name: '6A+',
     intensity: 24,
-    difficultyRange: DifficultyRange(min: 45, max: 47),
+    difficultyRange: DifficultyRange(min: 45, max: 48),
     gradeBand: GradeBand.experienced,
   ),
   Grade(
     name: '6B',
     intensity: 25,
-    difficultyRange: DifficultyRange(min: 47, max: 50),
+    difficultyRange: DifficultyRange(min: 48, max: 51),
     gradeBand: GradeBand.experienced,
   ),
   Grade(
     name: '6B+',
     intensity: 26,
-    difficultyRange: DifficultyRange(min: 50, max: 54),
+    difficultyRange: DifficultyRange(min: 51, max: 54),
     gradeBand: GradeBand.experienced,
   ),
 ];

@@ -55,3 +55,31 @@ class GradeCalculator {
     return recordGrade;
   }
 }
+
+class GradeCalculatorBuilder {
+  final GradeSystem system;
+  final String input;
+
+  GradeCalculatorBuilder({
+    required this.system,
+    required this.input,
+  });
+
+  to(GradeSystem otherSystem) {
+    return GradeCalculator(
+      systemA: system,
+      systemB: otherSystem,
+    ).atob(
+      system.findByName(input),
+    );
+  }
+
+  from(GradeSystem otherSystem) {
+    return GradeCalculator(
+      systemA: system,
+      systemB: otherSystem,
+    ).btoa(
+      otherSystem.findByName(input),
+    );
+  }
+}

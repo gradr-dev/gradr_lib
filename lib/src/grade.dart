@@ -14,6 +14,11 @@ class Grade {
     required this.gradeBand,
   });
 
+  @override
+  String toString() {
+    return 'Grade($name) -> $gradeBand | $difficultyRange';
+  }
+
   factory Grade.fromJson(Map<String, dynamic> data) {
     return Grade(
       name: data['name'],

@@ -64,13 +64,13 @@ final experiencedVermin = [
   Grade(
     name: 'V3',
     intensity: 8,
-    difficultyRange: DifficultyRange(min: 45, max: 49.5),
+    difficultyRange: DifficultyRange(min: 45, max: 51),
     gradeBand: GradeBand.experienced,
   ),
   Grade(
     name: 'V4',
     intensity: 9,
-    difficultyRange: DifficultyRange(min: 49.5, max: 54),
+    difficultyRange: DifficultyRange(min: 51, max: 54),
     gradeBand: GradeBand.experienced,
   ),
 ];

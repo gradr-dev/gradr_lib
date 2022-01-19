@@ -4,6 +4,10 @@ import 'package:gradr_lib/grading_systems/boulder/vermin_scale.dart';
 import 'package:gradr_lib/src/tools/grade_calculator.dart';
 
 void main() {
+  // VerminScale.convert('v3').to(FontScale);
+  // FontScale.convert('6b').to(VerminScale);
+  // fontGradeSystem.convert('6a').to(verminGradeSystem);
+
   final vToFontCalculator = GradeCalculator(
     systemA: verminGradeSystem,
     systemB: fontGradeSystem,
@@ -122,6 +126,27 @@ void main() {
     var res = vToFontCalculator.atob(verminGradeSystem.findByName('v17'));
     var expected = [fontGradeSystem.findByName('9a')];
 
+    expect(res, expected);
+  });
+
+  test('builder 6b to v3', () {
+    var res = fontGradeSystem.convert('6b').to(verminGradeSystem);
+    var expected = [verminGradeSystem.findByName('v3')];
+    expect(res, expected);
+  });
+
+  test('builder 6a+ to v3', () {
+    var res = fontGradeSystem.convert('6a+').to(verminGradeSystem);
+    var expected = [verminGradeSystem.findByName('v2')];
+    expect(res, expected);
+  });
+
+  test('builder from', () {
+    var res = fontGradeSystem.convert('v3').from(verminGradeSystem);
+    var expected = [
+      fontGradeSystem.findByName('6A+'),
+      fontGradeSystem.findByName('6b'),
+    ];
     expect(res, expected);
   });
 }
