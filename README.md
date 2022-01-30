@@ -44,12 +44,12 @@ To install the package check the install [guide](https://pub.dev/packages/gradr_
 
 ## Usage
 
-Here is an example on how to convert from V-Scale to Font scale and viceversa:
+Here is an example on how to convert from V-Scale to Font scale and viceversa, using GradeCalculator:
 
 ```dart
 final vToFont = GradeCalculator(
-    systemA: vScale,
-    systemB: fontScale,
+    systemA: verminGradeSystem,
+    systemB: fontGradeSystem,
 );
 
 // Convert from grading system A (vScale) to system B (fontScale)
@@ -64,6 +64,13 @@ vToFont.btoa(
     fontScale.findByName('6B')
 );
 // > V3
+```
+
+You can also convert using the from-to interface, as follows:
+
+```dart
+fontGradeSystem.convert('v3').from(verminGradeSystem); // 6b
+fontGradeSystem.convert('6b').to(verminGradeSystem);   // v3
 ```
 
 ## Need Gradr for another platform?
