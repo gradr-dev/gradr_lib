@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:flutter_test/flutter_test.dart';
 import 'package:gradr_lib/src/difficulty_range.dart';
 
@@ -14,6 +16,7 @@ void main() {
   });
 
   test('dsasdsadda', () {
+    // ignore: unused_local_variable
     var d2 = DifficultyRange(min: 45.0, max: 48.0);
     var d3 = DifficultyRange(min: 48.0, max: 51.0);
 

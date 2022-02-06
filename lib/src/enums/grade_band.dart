@@ -1,3 +1,4 @@
+/// Supported grade/difficulty band
 enum GradeBand {
   uknown,
   begginer,

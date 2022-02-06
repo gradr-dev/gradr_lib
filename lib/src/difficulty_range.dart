@@ -1,3 +1,5 @@
+/// Defines a range of difficulty, it has a [min] difficulty and a [max] difficulty.
+/// Each [Grade] must define one to be able to convert from one grading system to another
 class DifficultyRange {
   final double min;
   final double max;
@@ -9,6 +11,7 @@ class DifficultyRange {
 
   DifficultyRange.single(this.min) : max = min + 1;
 
+  /// Checks if a [DifficultyRange] is in range of this [DifficultyRange]
   bool inRangeOf(DifficultyRange b) {
     // // 45, max: 49.5
     // // 47, max: 50
@@ -24,6 +27,7 @@ class DifficultyRange {
     return 'DifficultyRange(min: $min, max: $max)';
   }
 
+  /// Factory to instantiate a [DifficultyRange] from JSON
   factory DifficultyRange.fromJson(Map<String, dynamic> data) {
     return DifficultyRange(
       min: data['min'] ?? 0,

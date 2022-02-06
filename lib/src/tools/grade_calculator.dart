@@ -2,6 +2,19 @@ import 'package:gradr_lib/src/difficulty_range.dart';
 import 'package:gradr_lib/src/grade.dart';
 import 'package:gradr_lib/src/grade_system.dart';
 
+/// This class allows you to create calculators/converters between 2 different grading systems.
+///
+/// **Usage**
+/// ```dart
+/// final vToFont = GradeCalculator(
+///   systemA: verminGradeSystem,
+///   systemB: fontGradeSystem,
+/// );
+///
+/// vToFont.atob(
+///    vScale.findByName('V3')
+/// );
+///```
 class GradeCalculator {
   final GradeSystem systemA;
   final GradeSystem systemB;
@@ -11,14 +24,17 @@ class GradeCalculator {
     required this.systemB,
   });
 
+  /// Convert from [GradeSystem] A to [GradeSystem] B
   List<Grade> atob(Grade? a) {
     return convert(a, systemB);
   }
 
+  /// Convert from [GradeSystem] B to [GradeSystem] A
   List<Grade> btoa(Grade? b) {
     return convert(b, systemA);
   }
 
+  /// Convert a grade to a [GradeSystem]
   static List<Grade> convert(Grade? grade, GradeSystem system) {
     if (grade == null || system.isEmpty) return [];
 
@@ -39,6 +55,7 @@ class GradeCalculator {
     return matchingGrades;
   }
 
+  /// Get's the closest grade for a specific [DifficultyRange] from the supplied [grades] list.
   static Grade? getClosest(List<Grade> grades, DifficultyRange range) {
     var recordDiff = double.infinity;
     Grade? recordGrade;
@@ -56,6 +73,7 @@ class GradeCalculator {
   }
 }
 
+/// Another interface for creating a [GradeCalculator]
 class GradeCalculatorBuilder {
   final GradeSystem system;
   final String input;

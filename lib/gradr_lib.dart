@@ -9,4 +9,4 @@ export './src/enums/grade_band.dart';
 export './src/tools/grade_calculator.dart';
 export './src/tools/grade_system_detector.dart';
 
-export './grading_systems/main.dart';
+export './src/grading_systems/main.dart';

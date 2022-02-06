@@ -1,3 +1,4 @@
+/// Supported climbing styles
 enum ClimbingStyle {
   sport,
   boulder,

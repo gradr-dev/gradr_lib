@@ -15,7 +15,7 @@ class _GradeSystemConverterScreenState extends State<GradeSystemConverterScreen>
         title: const Text('Grade System Converter'),
       ),
       body: ListView(
-        children: [],
+        children: const [],
       ),
     );
   }
