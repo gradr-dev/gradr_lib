@@ -1,5 +1,7 @@
-import 'package:gradr_lib/gradr_lib.dart';
+import 'package:gradr_lib/src/difficulty_range.dart';
+import 'package:gradr_lib/src/enums/grade_band.dart';
 import 'package:gradr_lib/src/grade.dart';
+import 'package:gradr_lib/src/grade_system.dart';
 
 // TODO: Think of a way of "scoring" results when there are collisions (ie: french sport and boulder),
 // it would be cool to tell the user something like: "It can be French Sport or French Boulder,

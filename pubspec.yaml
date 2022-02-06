@@ -1,6 +1,6 @@
 name: gradr_lib
 description: Convert climbing grading systems with a really simple interface.
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/gradr-dev/gradr_lib
 
 environment:
