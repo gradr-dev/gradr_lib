@@ -21,21 +21,19 @@ The library was initial going to be developed for the [Gradr App]() I've also cr
 > You can take a look at [this]() writup on how gradr handles this. Feel free to offer any advice or help in this regard!
 
 ## Features
-
-* Pre-Built common grading systems
+* Grading systems
   * [x] V-Scale
   * [x] Font
-  * [ ] French
-  * [ ] YDS
+  * [x] French
+  * [x] YDS
   * [ ] South africa
   * [ ] Brazil
   * [ ] UK
   * [ ] IRCRA
   * [ ] UIAA
   * ...
-* [ ] Pre-Built calculators
-* [ ] Easy conversion between grading systems
-* [ ] Grading system detector
+* [x] Conversion between grading systems
+* [x] Grading system detector
 * [ ] Convert to all systems
 
 ## Getting started
@@ -44,12 +42,13 @@ To install the package check the install [guide](https://pub.dev/packages/gradr_
 
 ## Usage
 
-Here is an example on how to convert from V-Scale to Font scale and viceversa:
+### Convert between Grading Systems
+Here is an example on how to convert from V-Scale to Font scale and viceversa, using GradeCalculator:
 
 ```dart
 final vToFont = GradeCalculator(
-    systemA: vScale,
-    systemB: fontScale,
+    systemA: verminGradeSystem,
+    systemB: fontGradeSystem,
 );
 
 // Convert from grading system A (vScale) to system B (fontScale)
@@ -65,6 +64,39 @@ vToFont.btoa(
 );
 // > V3
 ```
+
+You can also convert using the from-to interface, as follows:
+
+```dart
+fontGradeSystem.convert('v3').from(verminGradeSystem); // 6b
+fontGradeSystem.convert('6b').to(verminGradeSystem);   // v3
+```
+
+### Detect Grading System
+Gradr also offers a utility to detect grading systems. 
+```dart
+final detector = GradeSystemDetector(
+    detectors: [
+      VScaleGradeDetector(),
+      FontGradeDetector(),
+      FontGradeDetector(),
+    ],
+);
+
+GradeDetectorResult detectedResult = detector.detect(grade);
+
+// A list of posible grading systems is returnes in the result
+detectedResult.detectedSystems;
+
+// It also returns a list of "formalized" grades (instance of Gradr Grade class).
+detectedResult.formalizedGrades;
+
+// It also returns the original input
+detectedResult.originalInput;
+```
+* Note that the GradeSystemDetector allows you to pass in the detectors you need, and/or custom detectors.  
+
+
 
 ## Need Gradr for another platform?
 
