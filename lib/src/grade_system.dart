@@ -78,7 +78,9 @@ class GradeSystem {
       name: data["name"],
       country: data["country"],
       climbingStyle: data["climbingStyle"],
-      grades: List.from(data["grades"] ?? []).map((g) => Grade.fromJson(g)).toList(),
+      grades: List.from(data["grades"] ?? [])
+          .map((g) => Grade.fromJson(g))
+          .toList(),
     );
   }
 }

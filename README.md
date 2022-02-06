@@ -1,6 +1,6 @@
 <div align="center">
   
-  <img src=".github/media/banner.png" height="250">
+  <img src="https://github.com/gradr-dev/gradr_lib/blob/main/.github/media/banner.png" height="250">
   
   
   Convert climbing grading systems with a really simple interface.

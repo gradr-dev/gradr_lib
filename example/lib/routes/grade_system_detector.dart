@@ -5,7 +5,8 @@ class GradeSystemDetectorScreen extends StatefulWidget {
   const GradeSystemDetectorScreen({Key? key}) : super(key: key);
 
   @override
-  _GradeSystemDetectorScreenState createState() => _GradeSystemDetectorScreenState();
+  _GradeSystemDetectorScreenState createState() =>
+      _GradeSystemDetectorScreenState();
 }
 
 class _GradeSystemDetectorScreenState extends State<GradeSystemDetectorScreen> {
