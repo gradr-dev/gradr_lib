@@ -1,7 +1,6 @@
 <div align="center">
   
-  <img src="https://github.com/gradr-dev/gradr_lib/blob/main/.github/media/banner.png" height="250">
-  
+  <img src="https://raw.githubusercontent.com/gradr-dev/gradr_lib/main/.github/media/banner.png" height="250">
   
   Convert climbing grading systems with a really simple interface.
 
@@ -34,7 +33,6 @@ The library was initial going to be developed for the [Gradr App]() I've also cr
   * ...
 * [x] Conversion between grading systems
 * [x] Grading system detector
-* [ ] Convert to all systems
 
 ## Getting started
 
