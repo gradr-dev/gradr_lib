@@ -13,12 +13,6 @@ class DifficultyRange {
 
   /// Checks if a [DifficultyRange] is in range of this [DifficultyRange]
   bool inRangeOf(DifficultyRange b) {
-    // // 45, max: 49.5
-    // // 47, max: 50
-    // var av = max - min;
-    // var bv = b.max - b.min;
-    // print('$av - $bv');
-
     return min >= b.min && max <= b.max;
   }
 
