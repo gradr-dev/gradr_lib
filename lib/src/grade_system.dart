@@ -35,6 +35,20 @@ class GradeSystem {
     this.grades = const [],
   });
 
+  GradeSystem.boulder({
+    required this.code,
+    required this.name,
+    required this.country,
+    this.grades = const [],
+  }) : climbingStyle = ClimbingStyle.boulder;
+
+  GradeSystem.sport({
+    required this.code,
+    required this.name,
+    required this.country,
+    this.grades = const [],
+  }) : climbingStyle = ClimbingStyle.sport;
+
   /// Returns the grade for a particular [GradeBand]
   List<Grade> gradesByBand(GradeBand band) {
     return grades
@@ -78,9 +92,7 @@ class GradeSystem {
       name: data["name"],
       country: data["country"],
       climbingStyle: data["climbingStyle"],
-      grades: List.from(data["grades"] ?? [])
-          .map((g) => Grade.fromJson(g))
-          .toList(),
+      grades: List.from(data["grades"] ?? []).map((g) => Grade.fromJson(g)).toList(),
     );
   }
 }

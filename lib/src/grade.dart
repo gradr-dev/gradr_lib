@@ -21,6 +21,31 @@ class Grade {
     required this.gradeBand,
   });
 
+  Grade.begginer({
+    required this.name,
+    required this.difficultyRange,
+  }) : gradeBand = GradeBand.begginer;
+
+  Grade.intermediate({
+    required this.name,
+    required this.difficultyRange,
+  }) : gradeBand = GradeBand.intermediate;
+
+  Grade.experienced({
+    required this.name,
+    required this.difficultyRange,
+  }) : gradeBand = GradeBand.experienced;
+
+  Grade.expert({
+    required this.name,
+    required this.difficultyRange,
+  }) : gradeBand = GradeBand.expert;
+
+  Grade.elite({
+    required this.name,
+    required this.difficultyRange,
+  }) : gradeBand = GradeBand.elite;
+
   @override
   String toString() {
     return 'Grade($name) -> $gradeBand | $difficultyRange';
