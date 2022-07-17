@@ -201,42 +201,42 @@ final eliteFont = [
   Grade(
     name: '8A',
     difficultyRange: DifficultyRange(min: 72, max: 74.25),
-    gradeBand: GradeBand.expert,
+    gradeBand: GradeBand.elite,
   ),
   Grade(
     name: '8A+',
     difficultyRange: DifficultyRange(min: 74.25, max: 76.5),
-    gradeBand: GradeBand.expert,
+    gradeBand: GradeBand.elite,
   ),
   Grade(
     name: '8B',
     difficultyRange: DifficultyRange(min: 76.5, max: 78.75),
-    gradeBand: GradeBand.expert,
+    gradeBand: GradeBand.elite,
   ),
   Grade(
     name: '8B+',
     difficultyRange: DifficultyRange(min: 78.75, max: 81),
-    gradeBand: GradeBand.expert,
+    gradeBand: GradeBand.elite,
   ),
   Grade(
     name: '8C',
     difficultyRange: DifficultyRange(min: 81, max: 83.25),
-    gradeBand: GradeBand.expert,
+    gradeBand: GradeBand.elite,
   ),
   Grade(
     name: '8C+',
     difficultyRange: DifficultyRange(min: 83.25, max: 85.5),
-    gradeBand: GradeBand.expert,
+    gradeBand: GradeBand.elite,
   ),
   Grade(
     name: '9A',
     difficultyRange: DifficultyRange(min: 85.5, max: 87.75),
-    gradeBand: GradeBand.expert,
+    gradeBand: GradeBand.elite,
   ),
   Grade(
     name: '9A+',
     difficultyRange: DifficultyRange(min: 87.75, max: 90),
-    gradeBand: GradeBand.expert,
+    gradeBand: GradeBand.elite,
   ),
 ];
 
